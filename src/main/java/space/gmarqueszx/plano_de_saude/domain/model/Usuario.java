@@ -10,7 +10,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.time.OffsetDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -29,7 +31,7 @@ public class Usuario {
 
     private String telefone;
 
-    @Column(name = "")
+    @Column(name = "data_de_nascimento")
     private LocalDate dataNascimento;
 
     @CreationTimestamp
@@ -40,6 +42,6 @@ public class Usuario {
     @Column(name = "data_de_atualizacao")
     private OffsetDateTime dataAtualizacao;
 
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL)
-    private Set<Documento> documentos = new HashSet<>();
+    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Documento> documentos = new ArrayList<>();
 }

@@ -1,0 +1,1 @@
+ALTER SEQUENCE seq_documento RENAME TO documento_seq;

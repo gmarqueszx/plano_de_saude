@@ -25,12 +25,15 @@ public class Documento {
     @Column(name = "tipo_do_documento")
     private String tipoDocumento;
 
+    @NotBlank
     private String descricao;
 
     @CreationTimestamp
+    @Column(name = "data_de_inclusao")
     private OffsetDateTime dataInclusao;
 
     @UpdateTimestamp
+    @Column(name = "data_de_atualizacao")
     private OffsetDateTime dataAtualizacao;
 
     @ManyToOne

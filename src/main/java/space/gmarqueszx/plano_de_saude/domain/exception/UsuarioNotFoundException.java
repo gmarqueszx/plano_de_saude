@@ -1,6 +1,6 @@
 package space.gmarqueszx.plano_de_saude.domain.exception;
 
-public class UsuarioNotFoundException extends RuntimeException {
+public class UsuarioNotFoundException extends EntityNotFoundException {
     public UsuarioNotFoundException(String message) {
         super(message);
     }
