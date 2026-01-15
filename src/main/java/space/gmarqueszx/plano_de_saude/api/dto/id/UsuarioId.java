@@ -1,4 +1,4 @@
-package space.gmarqueszx.plano_de_saude.api.dto.request.id;
+package space.gmarqueszx.plano_de_saude.api.dto.id;
 
 import lombok.Getter;
 import lombok.Setter;

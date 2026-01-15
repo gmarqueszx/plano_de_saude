@@ -56,7 +56,7 @@ public class UsuarioService {
             List<Documento> documentosSalvos = usuarioExistente.getDocumentos();
             documentosSalvos.clear();
             documentosSalvos.addAll(usuarioAtualizado.getDocumentos());
-            documentosSalvos.forEach(doc -> doc.setUsuario(usuarioAtualizado));
+            documentosSalvos.forEach(doc -> doc.setUsuario(usuarioExistente));
         }
 
         return salvar(usuarioExistente);
